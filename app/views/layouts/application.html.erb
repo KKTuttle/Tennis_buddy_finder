@@ -10,7 +10,7 @@
 
   <body>
     <div class="container">
-      <nav class="navbar navbar-inverse">
+      <nav class="navbar navbar-fixed-top navbar-inverse">
         <div class="container-fluid">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -54,9 +54,18 @@
           </div>
         </div>
       </nav>
+    </div>
+
+      <!-- <section class="img-responsive">
+        <img class="img-responsive" src="http://tlaclub.com/wp-content/uploads/tennis-stock-photo-2.jpg" alt="" />
+      </section> -->
+
+    <div class="container">
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
       <%= yield %>
+
+
     </div>
   </body>
 </html>
