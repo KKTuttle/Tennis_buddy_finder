@@ -50,9 +50,9 @@ group :development, :test do
   gem 'simplecov', require: false
   gem 'factory_girl_rails'
   gem "letter_opener"
-  gem 'poltergeist'
-  gem 'phantomjs', :require => 'phantomjs/poltergeist'
-  gem 'database_cleaner'
+  # gem 'poltergeist'
+  # gem 'phantomjs', :require => 'phantomjs/poltergeist'
+  # gem 'database_cleaner'
 end
 
 group :development do

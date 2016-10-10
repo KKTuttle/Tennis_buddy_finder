@@ -1,5 +1,5 @@
-class Place < ActiveRecord::Base
-  # geocoded_by :city
-  #
-  # after_validation :geocode
+class Place < ApplicationRecord
+  geocoded_by :address
+
+ after_validation :geocode
 end
