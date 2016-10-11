@@ -7,7 +7,7 @@ class PlacesController < ApplicationController
   def index
     @places = Place.all
     @hash = Gmaps4rails.build_markers(@places) do |place, marker|
-      place_path =  view_context.link_to place_path(place)
+      place_path = view_context.link_to place.name, place_path(place)
       marker.lat place.latitude
       marker.lng place.longitude
 
@@ -18,6 +18,7 @@ class PlacesController < ApplicationController
   # GET /places/1
   # GET /places/1.json
   def show
+    @place = Place.find(params[:id])
   end
 
   # GET /places/new
