@@ -7,11 +7,12 @@ class PlacesController < ApplicationController
   def index
     @places = Place.all
     @hash = Gmaps4rails.build_markers(@places) do |place, marker|
-      place_path = view_context.link_to place.name, place_path(place)
+      # place_path = view_context.link_to place.name, place_path(place)
+      place_path = view_context.link_to "View Calendar", place_path(place)
       marker.lat place.latitude
       marker.lng place.longitude
 
-      marker.infowindow "<b>#{place_path}<b>"
+      marker.infowindow "<b>#{place.name} #{place_path}<b>"
     end
   end
 
