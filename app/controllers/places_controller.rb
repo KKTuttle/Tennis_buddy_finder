@@ -7,10 +7,11 @@ class PlacesController < ApplicationController
   def index
     @places = Place.all
     @hash = Gmaps4rails.build_markers(@places) do |place, marker|
+      place_path =  view_context.link_to place_path(place)
       marker.lat place.latitude
       marker.lng place.longitude
 
-      marker.infowindow place.name
+      marker.infowindow "<b>#{place_path}<b>"
     end
   end
 
