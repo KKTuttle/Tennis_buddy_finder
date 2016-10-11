@@ -12,7 +12,7 @@ class PlacesController < ApplicationController
       marker.lat place.latitude
       marker.lng place.longitude
 
-      marker.infowindow "<b>#{place.name} #{place_path}<b>"
+      marker.infowindow "<b>#{place.name} - #{place_path}<b>"
     end
   end
 
