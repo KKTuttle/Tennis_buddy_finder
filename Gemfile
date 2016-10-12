@@ -31,9 +31,14 @@ gem 'dotenv-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# Calendar
+gem 'fullcalendar-rails'
+gem 'momentjs-rails'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+#MAPS
 gem 'gmaps4rails'
 gem 'geocoder'
 gem 'underscore-rails'
