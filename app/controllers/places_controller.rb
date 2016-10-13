@@ -20,6 +20,7 @@ class PlacesController < ApplicationController
   # GET /places/1.json
   def show
     @place = Place.find(params[:id])
+    @meetings = Meeting.all
   end
 
   # GET /places/new

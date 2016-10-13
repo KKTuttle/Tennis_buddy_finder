@@ -48,3 +48,23 @@ section {
 //   border-radius: 25px;
 //   padding: 10px;
 // }
+
+// Simple_calendar
+td.day  {
+  height: 100px;
+  width: auto;
+  border: .5px solid gray;
+  position: relative;
+}
+.addEvent {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+.calendar-title {
+  font-size: 25px;
+  font-weight: bolder;
+}
+.calendar-heading {
+  text-align: center;
+}

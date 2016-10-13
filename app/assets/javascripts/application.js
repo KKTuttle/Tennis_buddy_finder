@@ -21,20 +21,19 @@
 //= require_tree .
 
 // Calendar
-$(document).ready(function() {
-    // page is now ready, initialize the calendar...
-  $('#calendar').fullCalendar({
-      // put your options and callbacks here
-    // weekends: false,
-    // listWeek: true not working
-    // center: 'prevYear,nextYear',
-    header: {
-      center: "title",
-      left:'prevYear,nextYear',
-    },
-    firstDay: 1,
-
-    fixedWeekCount: false,
-    weekNumbers: true,
-  });
-});
+// $(document).ready(function() {
+//     // page is now ready, initialize the calendar...
+//   $('#calendar').fullCalendar({
+//       // put your options and callbacks here
+//     // weekends: false,
+//     // listWeek: true not working
+//     header: {
+//       center: "title",
+//       left:'prevYear,nextYear',
+//     },
+//     firstDay: 1,
+//
+//     fixedWeekCount: false,
+//     weekNumbers: true,
+//   });
+// });

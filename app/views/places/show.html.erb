@@ -1,7 +1,7 @@
-<link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
+<!-- <link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
 <script src='lib/jquery.min.js'></script>
 <script src='lib/moment.min.js'></script>
-<script src='fullcalendar/fullcalendar.js'></script>
+<script src='fullcalendar/fullcalendar.js'></script> -->
 
 <p id="notice"><%= notice %></p>
 
@@ -32,6 +32,16 @@
 
 <%= link_to 'Edit', edit_place_path(@place) %> |
 <%= link_to 'Back', places_path %>
-
+<br>
+<%= link_to "New Even for the Place", new_place_meeting_path(@place)%>
 <!--Calendar  -->
 <div id="calendar"></div>
+<hr>
+<div class="simple_calendar">
+  <%= month_calendar do |date| %>
+    <%= date.day %>| <br>
+    <%= button_to new_place_meeting_path(@place), class: "addEvent" do %>
+      <strong>+</strong</>
+    <% end %>
+  <%end%>
+</div>
