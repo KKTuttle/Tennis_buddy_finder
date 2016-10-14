@@ -1,7 +1,9 @@
 <%= render "layouts/errors", :object => @meeting %>
 
 <%= form_for [@place, @meeting] do |f| %>
+  <%=f.label :date %>
 
+  <%= f.text_field :date, "data-provide" => 'datepicker' %>
   <div class="field">
     <%= f.label :name %>
     <%= f.text_field :name %>

@@ -37,18 +37,24 @@
 <br>
 <%= link_to "New Even for the Place", new_place_meeting_path(@place)%>
 <!--Calendar  -->
-<div id="calendar"></div>z
+<div id="calendar"></div>
 <hr>
 
 <div class="simple_calendar">
   <%= month_calendar do |date| %>
-    <div id="plusButton">
-      <%= date.day %> | <br>
-      <%= button_to new_place_meeting_path(@place), class: "addEvent" do %>
-        <strong>+</strong</>
+    <div id="plusButton", remote: true>
+      <%= form_tag new_place_meeting_path(@place), :method => :get do %>
+        <%= hidden_field_tag 'date', date %>
+        <%= date.day %> | <br>
+        <%= submit_tag "+" %>
       <%end%>
+
     </div>
   <%end%>
 </div>
-
+<div class="results">
+  <% @place.meetings.each do |meeting|%>
+    <h5><%= meeting.name %></h5>
+  <%end%>
+</div>
 <h2>hey</h2>

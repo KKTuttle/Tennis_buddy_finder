@@ -8,7 +8,7 @@ class MeetingsController < ApplicationController
 
   def create
     @place =Place.find(params[:place_id])
-    @meeting = Place.meetings.new
+    @meeting = @place.meetings.new(meeting_params)
     # @meeting = Meeting.new(meeting_params)
     # @meeting.place = Place.find(params[:place_id])
 
@@ -22,6 +22,6 @@ class MeetingsController < ApplicationController
 
 private
   def meeting_params
-    params.require(:meeting).permit(:name, :start_time, :end_time)
+    params.require(:meeting).permit(:name, :start_time, :end_time, :date)
   end
 end

@@ -30,7 +30,7 @@ gem 'dotenv-rails'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'bootstrap-datepicker-rails'
 # Calendar
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'

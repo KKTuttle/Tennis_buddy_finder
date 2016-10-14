@@ -1,12 +1,13 @@
-// Calendar
-/*
-*= require fullcalendar
-*/
+
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "footer";
 @import "hero-img";
+/*
+*= require fullcalendar
+*= require bootstrap-datepicker
+*/
 
 html,
 body {
@@ -47,3 +48,9 @@ td.day  {
 .calendar-heading {
   text-align: center;
 }
+
+
+
+#plusButton:hover{
+		cursor: pointer;
+	}
