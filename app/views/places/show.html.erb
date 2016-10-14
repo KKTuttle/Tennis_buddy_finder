@@ -2,6 +2,8 @@
 <script src='lib/jquery.min.js'></script>
 <script src='lib/moment.min.js'></script>
 <script src='fullcalendar/fullcalendar.js'></script> -->
+<script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
 
 <p id="notice"><%= notice %></p>
 
@@ -35,13 +37,18 @@
 <br>
 <%= link_to "New Even for the Place", new_place_meeting_path(@place)%>
 <!--Calendar  -->
-<div id="calendar"></div>
+<div id="calendar"></div>z
 <hr>
+
 <div class="simple_calendar">
   <%= month_calendar do |date| %>
-    <%= date.day %>| <br>
-    <%= button_to new_place_meeting_path(@place), class: "addEvent" do %>
-      <strong>+</strong</>
-    <% end %>
+    <div id="plusButton">
+      <%= date.day %> | <br>
+      <%= button_to new_place_meeting_path(@place), class: "addEvent" do %>
+        <strong>+</strong</>
+      <%end%>
+    </div>
   <%end%>
 </div>
+
+<h2>hey</h2>

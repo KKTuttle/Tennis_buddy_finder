@@ -10,4 +10,7 @@ Rails.application.routes.draw do
 
   root :to => 'places#index'
   # root :to => 'home#index'
+
+  get "about", to: 'home#show'
+  get "contact", to: 'home#contact'
 end
