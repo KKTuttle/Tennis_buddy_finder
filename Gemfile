@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+gem 'aws-sdk-rails'
 gem 'omniauth-facebook'
 gem 'devise'
 gem "paperclip", "~> 5.0.0"
@@ -36,6 +36,8 @@ gem 'fullcalendar-rails'
 gem 'momentjs-rails'
 gem "simple_calendar", "~> 2.0"
 
+
+ gem 'wdm', '>= 0.1.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

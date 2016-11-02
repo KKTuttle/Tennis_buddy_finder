@@ -56,31 +56,40 @@
       </div>
     </nav>
 
-    <div class="wrapper">
-      <div class="container">
-        <% if flash[:alert] %>
-          <div class="alert alert-danger">
-            <%= flash[:alert] %>
-          </div>
-        <% end %>
-        <% if flash[:notice] %>
-          <div class="alert alert-success">
-            <%= flash[:notice] %>
-          </div>
-        <% end %>
-      </div>
-      <div class="container">
-        <%= yield %>
-          <p id='hey'>TEST</p>
-        </div>
 
+    <div class="container">
+      <% if flash[:alert] %>
+        <div class="alert alert-danger">
+          <%= flash[:alert] %>
+        </div>
+      <% end %>
+      <% if flash[:notice] %>
+        <div class="alert alert-success">
+          <%= flash[:notice] %>
+        </div>
+      <% end %>
+    </div>
+    <br>
+    <div class="main">
+      <div class="hero">
+        <h1>Some Fancy Header Text</h1>
+        <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQiqTVkJ48V0ULnj4IH2MrmV0exFpOJViNxTTCMgpZwWaFBKhr0"/>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="page-content">
+        <%= yield %>
+        <p id='hey'>TEST</p>
+      </div>
       <!-- <section class="img-responsive">
         <img class="img-responsive" src="http://tlaclub.com/wp-content/uploads/tennis-stock-photo-2.jpg" alt="" />
       </section> -->
-      <footer class ="footer-basic-centered">
-        <p class="footer-company-motto">FIND YOUR TENNIS BUDDY HERE</p>
-        <p class="footer-links"><%= link_to 'About', about_path %>&nbsp;&nbsp;&#0149;&nbsp;&nbsp; <%= link_to 'Contact', contact_path %>&nbsp;&nbsp;&#0149;&nbsp;&nbsp;<a href="#">Extra Page</a>
-      </footer>
+      <!-- <footer class ="footer-basic-centered"> -->
     </div>
+    <footer class ="footer">
+      <p class="footer-company-motto">FIND YOUR TENNIS BUDDY HERE</p>
+      <p class="footer-links"><%= link_to 'About', about_path %>&nbsp;&nbsp;&#0149;&nbsp;&nbsp; <%= link_to 'Contact', contact_path %>&nbsp;&nbsp;&#0149;&nbsp;&nbsp;<a href="#">Extra Page</a>
+    </footer>
   </body>
 </html>

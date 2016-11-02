@@ -2,17 +2,17 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "footer";
-@import "hero-img";
+// @import "footer";
+// @import "hero-img";
 /*
 *= require fullcalendar
 *= require bootstrap-datepicker
 */
 
-html,
-body {
-	height:100%;
-}
+// html,
+// body {
+// 	height:100%;
+// }
 
 .signin_as_margin {
   margin-top: 15px;
@@ -24,10 +24,10 @@ body {
   padding-left: 45px;
 }
 
-.wrapper {
-	min-height:100%;
-	position:relative;
-}
+// .wrapper {
+// 	min-height:100%;
+// 	position:relative;
+// }
 
 // Simple_calendar
 td.day  {
@@ -51,6 +51,60 @@ td.day  {
 
 
 
-#plusButton:hover{
-		cursor: pointer;
-	}
+// #plusButton:hover{
+// 		cursor: pointer;
+// 	}
+html {
+  position: relative;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 200px;
+}
+.footer {
+  position: absolute;
+  bottom:0;
+	left:0;
+  width: 100%;
+  height: 150px;
+  background-color: lightblue;
+  text-align: center;
+}
+.main{
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Expletus Sans', cursive;
+}
+
+.hero {
+  width: 100%;
+  max-width: 1200px;
+  height: 500px;
+  text-align: center;
+  margin: 0 auto;
+  // background: #392f28;
+  // background: url("sun.jpg") no-repeat center center;
+  // background-size: cover;
+
+  position: relative;
+  color: #392f28;
+}
+
+.hero img{
+  width: 100%;
+}
+
+.hero h1{
+  color:white;
+  font-size: 4.1em;
+  margin: auto;
+  position: absolute;
+  top: 120px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
