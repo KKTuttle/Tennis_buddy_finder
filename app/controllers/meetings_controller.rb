@@ -3,12 +3,15 @@ class MeetingsController < ApplicationController
   def new
     @place = Place.find(params[:place_id])
     @meeting = Meeting.new
+
     render :new
   end
 
   def create
     @place =Place.find(params[:place_id])
     @meeting = @place.meetings.new(meeting_params)
+    binding.pry
+
     # @meeting = Meeting.new(meeting_params)
     # @meeting.place = Place.find(params[:place_id])
 

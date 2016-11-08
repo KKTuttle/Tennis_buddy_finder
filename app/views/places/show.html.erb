@@ -35,12 +35,14 @@
 <%= link_to 'Edit', edit_place_path(@place) %> |
 <%= link_to 'Back', places_path %>
 <br>
-<%= link_to "New Even for the Place", new_place_meeting_path(@place)%>
-<!--Calendar  -->
-<div id="calendar"></div>
-<hr>
+<%= link_to "New Event for the Place", new_place_meeting_path(@place)%>
 
-<div class="simple_calendar">
+
+<!--Calendar  -->
+<!-- <div id="calendar"></div>
+<hr> -->
+
+<!-- <div class="simple_calendar">
   <%= month_calendar do |date| %>
     <div id="plusButton", remote: true>
       <%= form_tag new_place_meeting_path(@place), :method => :get do %>
@@ -48,13 +50,15 @@
         <%= date.day %> | <br>
         <%= submit_tag "+" %>
       <%end%>
-
     </div>
   <%end%>
-</div>
+</div> -->
+
 <div class="results">
   <% @place.meetings.each do |meeting|%>
-    <h5><%= meeting.name %></h5>
+    <h5><%= meeting.name %> - FROM: <%= meeting.start_time.strftime("%I:%M %p")%>|| TO: <%=meeting.end_time.strftime("%I:%M %p")%></h5>
+    <h1><%= meeting.date %></h1>
+    <hr>
   <%end%>
 </div>
 <h2>hey</h2>
