@@ -108,3 +108,18 @@ body {
   bottom: 0;
   z-index: 1;
 }
+
+.simple-calendar {
+  .prev-month, .next-month{
+    background: lightgrey;
+  }
+  .today{
+    background: lightyellow;
+  }
+}
+.eventCalendar {
+  cursor: pointer;
+}
+.eventCalendar:hover{
+  color:blue;
+}

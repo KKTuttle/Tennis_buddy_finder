@@ -35,28 +35,45 @@
 <%= link_to 'Edit', edit_place_path(@place) %> |
 <%= link_to 'Back', places_path %>
 <br>
-<%= link_to "New Event for the Place", new_place_meeting_path(@place)%>
-
-
+<%= link_to new_place_meeting_path(@place), class:"btn btn-primary" do %>
+  <span class="glyphicon glyphicon-plus"></span>
+  Add Event for <%= @place.name%>
+<% end %>
 <!--Calendar  -->
 <!-- <div id="calendar"></div>
 <hr> -->
 
-<!-- <div class="simple_calendar">
+<div class="simple_calendar">
   <%= month_calendar do |date| %>
-    <div id="plusButton", remote: true>
-      <%= form_tag new_place_meeting_path(@place), :method => :get do %>
-        <%= hidden_field_tag 'date', date %>
-        <%= date.day %> | <br>
-        <%= submit_tag "+" %>
+    <%= date.month%>/<%= date.day %>
+    <hr>
+    <% @place.meetings.each do |meeting|%>
+      <% @datum = date.month.to_s + "/" + date.day.to_s + "/" + date.year.to_s %>
+
+      <% if (meeting.date.to_s  === @datum) %>
+
+        <h5 class="eventCalendar">
+          <%= meeting.start_time.strftime("%I:%M %p")%>-<%=meeting.end_time.strftime("%I:%M %p")%>
+        </h5>
+        <h3 class='tag-tooltip' data="toggle:tooltip",data-origin-title='Hey'
+        data-placement='right'><%= meeting.name %>
+      <% else %>
+        <p></p>
+      <!-- <div id="plusButton", remote: true>
+        <%= form_tag new_place_meeting_path(@place), :method => :get do %>
+          <%= hidden_field_tag 'date', date %>
+          <%= date.day %> | <br>
+          <%= submit_tag "+" %>
+        <%end%>
+      </div> -->
       <%end%>
-    </div>
+    <%end%>
   <%end%>
-</div> -->
+</div>
 
 <div class="results">
   <% @place.meetings.each do |meeting|%>
-    <h5><%= meeting.name %> - FROM: <%= meeting.start_time.strftime("%I:%M %p")%>|| TO: <%=meeting.end_time.strftime("%I:%M %p")%></h5>
+    <h5> <%= meeting.name %> - FROM: <%= meeting.start_time.strftime("%I:%M %p")%>|| TO: <%=meeting.end_time.strftime("%I:%M %p")%></h5>
     <h1><%= meeting.date %></h1>
     <hr>
   <%end%>
