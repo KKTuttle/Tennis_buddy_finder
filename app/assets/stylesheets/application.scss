@@ -1,7 +1,6 @@
-
-
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif');
 // @import "footer";
 // @import "hero-img";
 /*
@@ -16,13 +15,22 @@
 .background{
 
 }
-body{
+html {
+  position: relative;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  /* Margin bottom by footer height */
+  font-family: 'Bree Serif', serif;
+  margin-bottom: 200px;
   color:black;
-  background: url("http://thechromologist.com/wp-content/uploads/2015/07/ap_britain_wimbledon_tennis_566917291.jpg");
+  background: url("http://thechromologist.com/wp-content/uploads/2015/07/ap_britain_wimbledon_tennis_566917291.jpg") right bottom no-repeat;
   // background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Old_school_tennis_racquets.jpg/1200px-Old_school_tennis_racquets.jpg");
   background-size: cover;
-
 }
+
 table{
   background-color: white;
 }
@@ -35,11 +43,6 @@ table{
   padding-right: 45px;
   padding-left: 45px;
 }
-
-// .wrapper {
-// 	min-height:100%;
-// 	position:relative;
-// }
 
 // Simple_calendar
 td.day  {
@@ -61,53 +64,24 @@ td.day  {
   text-align: center;
 }
 
-
-
-// #plusButton:hover{
-// 		cursor: pointer;
-// 	}
-html {
-  position: relative;
-  min-height: 100%;
-  margin: 0;
-  padding: 0;
-}
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 200px;
-}
 .footer {
   position: absolute;
   bottom:0;
 	left:0;
   width: 100%;
-  height: 150px;
-  background-color: lightblue;
+  height: 80px;
+  background-color: #f8f8f8;
+  border-color: #e7e7e7;
   text-align: center;
+}
+.footer-company-motto {
+  padding-top: 10px;
 }
 .main{
   width: 100%;
   overflow: hidden;
   font-family: 'Expletus Sans', cursive;
 }
-
-// .hero {
-//   width: 100%;
-//   max-width: 1200px;
-//   height: 500px;
-//   text-align: center;
-//   margin: 0 auto;
-//   // background: #392f28;
-//   // background: url("sun.jpg") no-repeat center center;
-//   // background-size: cover;
-//
-//   position: relative;
-//   color: #392f28;
-// }
-
-// .main img{
-//   width: 100%;
-// }
 
 .main h1{
   color:white;
@@ -134,4 +108,7 @@ body {
 }
 .eventCalendar:hover{
   color:blue;
+}
+.glyphicon-remove:before{
+  
 }
