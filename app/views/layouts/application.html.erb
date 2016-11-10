@@ -3,13 +3,13 @@
   <head>
     <title>TennisBuddy</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   </head>
 
   <body>
+
     <nav class="navbar navbar-default">
       <!--navbar-fixed-top above  -->
       <div class="container-fluid">
@@ -24,12 +24,13 @@
 
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
-            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "Home", home_path %></li>
+            <% if user_signed_in? %>
 
               <% if current_user.username == "admin" %>
                 <li><%= link_to "Admin", admin_path %></li>
               <%end%>
-
+            <%end%>
           </ul>
 
           <ul class="nav navbar-nav navbar-right">

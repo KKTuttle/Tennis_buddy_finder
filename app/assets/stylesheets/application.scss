@@ -13,7 +13,19 @@
 // body {
 // 	height:100%;
 // }
+.background{
 
+}
+body{
+  color:black;
+  background: url("http://thechromologist.com/wp-content/uploads/2015/07/ap_britain_wimbledon_tennis_566917291.jpg");
+  // background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Old_school_tennis_racquets.jpg/1200px-Old_school_tennis_racquets.jpg");
+  background-size: cover;
+
+}
+table{
+  background-color: white;
+}
 .signin_as_margin {
   margin-top: 15px;
   color: #9d9d9d;
