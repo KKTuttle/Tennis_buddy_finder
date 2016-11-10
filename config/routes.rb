@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   root :to => 'places#index'
   # root :to => 'home#index'
 
+  get 'admin', to: 'places#admin'
   get "about", to: 'home#show'
   get "contact", to: 'home#contact'
 end

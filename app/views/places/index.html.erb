@@ -16,29 +16,20 @@
   <table class="table table-bordered table-hover">
     <thead>
       <tr>
-            <!-- <th>Latitude</th>
-            <th>Longitude</th> -->
-            <th>Name</th>
-            <th>Adress</th>
-            <th>Title</th>
-            <th></th>
-        <th></th>
+        <th>Name</th>
+        <th>Adress</th>
+        <th>Title</th>
         <th></th>
       </tr>
     </thead>
 
-
   <tbody>
     <% @places.each do |place| %>
       <tr>
-        <!-- <td><%= place.longitude %></td>
-        <td><%= place.latitude %></td> -->
         <td><%= place.name %></td>
         <td><%= place.address %></td>
         <td><%= place.title %></td>
         <td><%= link_to 'Show', place %></td>
-        <td><%= link_to 'Edit', edit_place_path(place) %></td>
-        <td><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

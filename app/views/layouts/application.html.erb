@@ -24,7 +24,12 @@
 
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
-            <li class="active"><%= link_to "Home", root_path %></li>
+            <li><%= link_to "Home", root_path %></li>
+
+              <% if current_user.username == "admin" %>
+                <li><%= link_to "Admin", admin_path %></li>
+              <%end%>
+
           </ul>
 
           <ul class="nav navbar-nav navbar-right">

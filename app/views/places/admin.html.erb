@@ -1,0 +1,33 @@
+<div class="table-responsive">
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Latitude</th>
+            <th>Longitude</th>
+            <th>Name</th>
+            <th>Adress</th>
+            <th>Title</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+
+  <tbody>
+    <% @places.each do |place| %>
+      <tr>
+        <td><%= place.longitude %></td>
+        <td><%= place.latitude %></td>
+        <td><%= place.name %></td>
+        <td><%= place.address %></td>
+        <td><%= place.title %></td>
+        <td><%= link_to 'Show', place %></td>
+        <td><%= link_to edit_place_path(place) do %>
+          <span class= "glyphicon glyphicon-pencil"></span><%end%></td>
+        <td><%= link_to place, method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <span class= "glyphicon glyphicon-remove"></span><%end%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

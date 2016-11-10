@@ -28,6 +28,10 @@ class PlacesController < ApplicationController
     @place = Place.new
   end
 
+  def admin
+    @places= Place.all
+  end
+
   # GET /places/1/edit
   def edit
   end

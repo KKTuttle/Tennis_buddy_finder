@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create(email: "test@test", username: "katie", password: "password")
+User.create(email: "admin@admin", username: "admin", password: "password")
 
 Place.create(name: "Irving park", address: "NE 7th and Frenont, Portland, OR, United States", title: "Public", longitude:-122.6586173, latitude: 45.5482658)
 
