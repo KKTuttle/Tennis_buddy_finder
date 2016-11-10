@@ -11,15 +11,19 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :longitude %>
-    <%= f.text_field :longitude %>
-  </div>
+  <% if user_signed_in? %>
+    <% if current_user.username == "admin" %>
+      <div class="field">
+        <%= f.label :longitude %>
+        <%= f.text_field :longitude %>
+      </div>
 
-  <div class="field">
-    <%= f.label :latitude %>
-    <%= f.text_field :latitude %>
-  </div>
+      <div class="field">
+        <%= f.label :latitude %>
+        <%= f.text_field :latitude %>
+      </div>
+    <%end%>
+  <%end%>
 
   <div class="field">
     <%= f.label :name %>

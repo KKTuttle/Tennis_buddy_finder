@@ -26,10 +26,13 @@ class PlacesController < ApplicationController
   # GET /places/new
   def new
     @place = Place.new
+    # @user = User.find(params[:user_id])
+
   end
 
   def admin
     @places= Place.all
+    @users= User.all
   end
 
   # GET /places/1/edit
@@ -39,8 +42,10 @@ class PlacesController < ApplicationController
   # POST /places
   # POST /places.json
   def create
-    @place = Place.new(place_params)
+    # @user=current_user
 
+    @place = Place.new(place_params)
+    # @place.update(user_id: @user.id)
     respond_to do |format|
       if @place.save
         format.html { redirect_to @place, notice: 'Place was successfully created.' }

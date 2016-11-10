@@ -1,3 +1,5 @@
+<h1>Saved Courts</h1>
+
 <div class="table-responsive">
   <table class="table table-bordered table-hover">
     <thead>
@@ -8,8 +10,9 @@
             <th>Adress</th>
             <th>Title</th>
             <th></th>
-        <th></th>
-        <th></th>
+        <th>Actions</th>
+
+        <th>User</th>
       </tr>
     </thead>
 
@@ -24,9 +27,10 @@
         <td><%= place.title %></td>
         <td><%= link_to 'Show', place %></td>
         <td><%= link_to edit_place_path(place) do %>
-          <span class= "glyphicon glyphicon-pencil"></span><%end%></td>
-        <td><%= link_to place, method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <span class= "glyphicon glyphicon-pencil"></span><%end%>
+          <%= link_to place, method: :delete, data: { confirm: 'Are you sure?' } , class: " pull-right" do %>
           <span class= "glyphicon glyphicon-remove"></span><%end%></td>
+        <td></td>
       </tr>
     <% end %>
   </tbody>
